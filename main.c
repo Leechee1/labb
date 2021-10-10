@@ -99,29 +99,77 @@
 
 //计数游戏
 
+//#include "stdio.h"
+//#include "stdlib.h"
+//#include "time.h"
+//
+//int main(){
+//
+//
+//    srand(time(0));
+//    int a=rand();
+//    int b=0;
+//    int c=0;
+////    printf("%d\n",a%100);
+//    printf("please enter your number\n");
+//    scanf("%d",&b);
+//    int d=a%100;
+//    while (b!=d) {
+//        c++;
+//        printf("你猜错了，请再输入一个数字\n");
+//        scanf("%d",&b);
+//
+//    }
+//        printf("恭喜你，你猜对了！\n");
+//    printf("你用了%d次猜对了这个数",c);
+//
+//}
+    
+
+
+//计数游戏版本二
+
+
+
 #include "stdio.h"
 #include "stdlib.h"
 #include "time.h"
+
 
 int main(){
     
     
     srand(time(0));
-    int a=rand();
+    int a=rand()%100;
     int b=0;
     int c=0;
-//    printf("%d\n",a%100);
-    printf("please enter your number\n");
-    scanf("%d",&b);
-    int d=a%100;
-    while (b!=d) {
-        c++;
-        printf("你猜错了，请再输入一个数字\n");
+   
+    
+    do{ printf("请输入一个100以内的数字：\n");
         scanf("%d",&b);
+       if (b>a) {
+        
+           printf("你输入的数大了");}
+       else if (b<a){
+           printf("你输入的数小了");
+           
+       }
+        
+        c++;
+    }while (b!=a);
+   
+        printf("恭喜你，你用了%d次猜对了！！",c);
+    
+    return 0;
 
-    }
-        printf("恭喜你，你猜对了！！");
-    printf("你用了%d次猜对了这个数",c);
-    
 }
+
+
+            
     
+    
+    
+    
+    
+    
+
